@@ -1,0 +1,14 @@
+opam-version: "1.2"
+version: "1.0"
+maintainer: "pierre.oechsel@gmail.com"
+authors: ["Pierre Oechsel"]
+build: [
+  [make]
+]
+depends: [
+  "core"
+  "cohttp"
+  "cohttp-lwt-unix"
+  "ppx_deriving_yojson"
+	"yojson"
+]

@@ -1,0 +1,17 @@
+(executables
+ (names ocamlmoe)
+  (libraries 
+              core
+              cohttp
+              cohttp-lwt-unix
+              ppx_deriving_yojson.runtime
+              ppx_deriving_yojson
+	      yojson
+              )
+  (preprocess (pps ppx_deriving_yojson ))
+
+ )
+
+(install
+(section bin)
+(files (ocamlmoe.exe as ocamlmoe)))
