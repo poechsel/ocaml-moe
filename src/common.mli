@@ -47,23 +47,19 @@ type bounded_domain_info =
 type mvndst_parameters = {releps: float; abseps: float; maxpts_per_dim: int}
 [@@deriving yojson]
 
-let[@deriving yojson] default_mvndst_parameters =
-  {releps= 1.0e-9; abseps= 1.0e-9; maxpts_per_dim= 20000}
+val default_mvndst_parameters : mvndst_parameters
 
 type covariance_type =
   | SQUARE_EXPONENTIAL_COVARIANCE_TYPE [@name "square_exponential"]
 [@@deriving yojson]
 
-let square_exponential_covariance_type = "square_exponential"
+val square_exponential_covariance_type : string
 
 type covariance_info =
   {covariance_type: string (*covariance_type*); hyperparameters: float list}
 [@@deriving yojson]
 
-let[@deriving yojson] default_covariance_info =
-  { covariance_type= square_exponential_covariance_type
-  ; (*SQUARE_EXPONENTIAL_COVARIANCE_TYPE*)
-  hyperparameters= [] }
+val default_covariance_info : covariance_info
 
 type gp_historical_info = {points_sampled: points_sampled list}
 [@@deriving yojson]
@@ -128,8 +124,4 @@ type 'a optimizer_info =
   ; optimizer_parameters: 'a option }
 [@@deriving yojson]
 
-let default_optimizer_info =
-  { optimizer_type= None
-  ; num_multistarts= None
-  ; num_random_samples= None
-  ; optimizer_parameters= None }
+val default_optimizer_info : 'a optimizer_info
