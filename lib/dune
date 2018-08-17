@@ -1,5 +1,5 @@
-(executables
- (names ocamlmoe)
+(library
+ (name moe)
   (libraries
   core
   cohttp
@@ -7,12 +7,6 @@
   ppx_deriving_yojson.runtime
   ppx_deriving_yojson
   yojson
-  moe
   )
   (preprocess (pps ppx_deriving_yojson ))
-
  )
-
-(install
-(section bin)
-(files (ocamlmoe.exe as ocamlmoe)))

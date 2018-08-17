@@ -1,3 +1,5 @@
+[@@@warning "-39"]
+
 (* TODO: add a [create] function for each one of them*)
 
 module HyperOptNewton : Common.Endpoint

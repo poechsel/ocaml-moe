@@ -1,3 +1,5 @@
+[@@@warning "-39"]
+
 open Common
 
 module EpiNewton : sig

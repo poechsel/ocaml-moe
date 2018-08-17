@@ -1,3 +1,7 @@
+[@@@warning "-39"]
+
+open Common
+
 include Common.Endpoint
 
 val create :
